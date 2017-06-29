@@ -339,17 +339,13 @@ class Header extends React.Component {
                             {settingsDropdown}
                         </div>}
 
-                        {//myAccountCount !== 0 ? null :<div className="grp-menu-item overflow-visible" >
-                            {flagDropdown}
-                        </div>}
+                        
 
                         <div className="grp-menu-item overflow-visible account-drop-down">
                             {accountsDropDown}
                         </div>
 
-                        {//!myAccountCount ? null : <div className="grp-menu-item overflow-visible account-drop-down">
-                            {flagDropdown}
-                        </div>}
+                        
 
                         {!myAccountCount ? null : <div className="grp-menu-item overflow-visible" >
                             {settingsDropdown}
