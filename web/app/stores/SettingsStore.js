@@ -34,15 +34,15 @@ class SettingsStore {
 
         this.initDone = false;
         this.defaultSettings = Immutable.Map({
-            locale: "en",
+            locale: "cn",
             apiServer: settingsAPIs.DEFAULT_WS_NODE,
             faucet_address: settingsAPIs.DEFAULT_FAUCET,
-            unit: CORE_ASSET,
+            unit: "CNY",
             showSettles: false,
             showAssetPercent: false,
             walletLockTimeout: 60 * 10,
             themes: "darkTheme",
-            disableChat: false,
+            disableChat: true,
             passwordLogin: false
         });
 
