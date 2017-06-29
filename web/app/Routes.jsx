@@ -125,14 +125,9 @@ const routes = (
             System.import("components/Blockchain/AssetContainer").then(loadRoute(cb)).catch(errorLoading);
         }}/>
         <Route path="create-account" getComponent={(location, cb) => {
-            System.import("components/LoginSelector").then(loadRoute(cb)).catch(errorLoading);
+            System.import("components/Account/CreateAccount").then(loadRoute(cb)).catch(errorLoading);
         }}>
-            <Route path="wallet" getComponent={(location, cb) => {
-                System.import("components/Account/CreateAccount").then(loadRoute(cb)).catch(errorLoading);
-            }}/>
-            <Route path="password" getComponent={(location, cb) => {
-                System.import("components/Account/CreateAccountPassword").then(loadRoute(cb)).catch(errorLoading);
-            }}/>
+           
         </Route>
 
         <Route path="existing-account" getComponent={(location, cb) => {
@@ -197,9 +192,6 @@ const routes = (
         </Route>
         <Route path="deposit-withdraw" getComponent={(location, cb) => {
             System.import("components/Account/AccountDepositWithdraw").then(loadRoute(cb)).catch(errorLoading);
-        }}/>
-        <Route path="create-worker" getComponent={(location, cb) => {
-            System.import("components/Account/WorkerCreate").then(loadRoute(cb)).catch(errorLoading);
         }}/>
         <Route path="/init-error" getComponent={(location, cb) => {
             System.import("components/InitError").then(loadRoute(cb)).catch(errorLoading);
