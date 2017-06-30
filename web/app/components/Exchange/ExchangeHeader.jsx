@@ -92,7 +92,20 @@ export default class ExchangeHeader extends React.Component {
                                                             
 								{feedPrice && showCallLimit ?
 									<PriceStat toolTip={counterpart.translate("tooltip.margin_price")} ready={marketReady} className="column-hide-medium is-call" price={feedPrice.getSqueezePrice({real: true})} quote={quoteAsset} base={baseAsset} content="exchange.squeeze"/> : null}
-							   
+                                                                
+                                                                <li className="stat v-align">
+                                                                    <a class="" href={`/asst/${baseSymbol}`}>
+                                                                    <span class="button bid" style="margin-left: 0px; padding: 4px; text-transform: none;">
+                                                                    <!-- react-text: 8872 --> <!-- /react-text -->
+                                                                        <span><!-- react-text: 8874 --><!-- /react-text -->
+                                                                            <span>{`${baseSymbol}`}</span>                                
+                                                                        </span><!-- react-text: 8876 -->详情<!-- /react-text -->
+                                                                    </span>
+                                                                    </a>
+                                                                </li>
+                                                                
+                                                           
+                                                           
                                                         </ul>
                             <ul className="market-stats stats top-stats">
                                 <li className="stat input clickable v-align" style={{borderLeft: "1px solid grey", borderRight: "none", padding: "3px 15px 0 15px"}} onClick={this.props.onToggleCharts}>
