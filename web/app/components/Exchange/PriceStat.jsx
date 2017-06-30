@@ -54,7 +54,7 @@ export default class PriceStat extends React.Component {
         let changeComp = !change ? null : change !== null ? <span className={changeClass}>&nbsp;{changeClass === "change-up" ? <span>&#8593;</span> : <span>&#8595;</span>}</span> : null;
 
         return (
-            <li className={cnames("stat", this.props.className)} data-place="bottom" data-tip={toolTip}>
+            <li className={cnames("stat v-align", this.props.className)} data-place="bottom" data-tip={toolTip}>
                 <span>
                     {content ? <span><Translate content={content} />:</span> : null}
 

@@ -67,12 +67,12 @@ export default class ExchangeHeader extends React.Component {
 					<div className="grid-block vertical" style={{overflow: "visible"}}>
 						<div className="grid-block wrap market-stats-container">
 							<ul className="market-stats stats top-stats">
-                                                        <div class="v-align">
+                                                        
 								{latestPrice ?
 									<PriceStat ready={marketReady} price={latestPrice.full} quote={quoteAsset} base={baseAsset} content="exchange.latest"/> : null}
-                                                        </div>
-                                                            <div class="v-align">
-								<li className="stat">
+                                                        
+                                                            
+								<li className="stat v-align">
 									<span>
 										<Translate component="span" content="account.hour_24" />
 										
@@ -80,19 +80,19 @@ export default class ExchangeHeader extends React.Component {
 										<span>%</span>
 									</span>
 								</li>
-                                                            </div>
-                                                            <div class="v-align">
+                                                            
+                                                            
 								{(volumeBase >= 0) ? <PriceStat ready={marketReady} decimals={0} volume={true} price={volumeBase} className="column-hide-small" volume2={volumeQuote} base={baseAsset} quote={quoteAsset} content="exchange.volume_24"/> : null}
-                                                            </div>
+                                                            
 								
-                                                            <div class="v-align">
+                                                            
 								{lowestCallPrice && showCallLimit ?
 									<PriceStat toolTip={counterpart.translate("tooltip.call_limit")} ready={marketReady} className="column-hide-medium is-call" price={lowestCallPrice} quote={quoteAsset} base={baseAsset} content="explorer.block.call_limit"/> : null}
-                                                            </div>
-                                                            <div class="v-align">
+                                                          
+                                                            
 								{feedPrice && showCallLimit ?
 									<PriceStat toolTip={counterpart.translate("tooltip.margin_price")} ready={marketReady} className="column-hide-medium is-call" price={feedPrice.getSqueezePrice({real: true})} quote={quoteAsset} base={baseAsset} content="exchange.squeeze"/> : null}
-							    </div>
+							   
                                                         </ul>
                             <ul className="market-stats stats top-stats">
                                 <li className="stat input clickable v-align" style={{borderLeft: "1px solid grey", borderRight: "none", padding: "3px 15px 0 15px"}} onClick={this.props.onToggleCharts}>
