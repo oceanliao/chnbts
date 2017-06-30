@@ -94,12 +94,20 @@ export default class ExchangeHeader extends React.Component {
 									<PriceStat toolTip={counterpart.translate("tooltip.margin_price")} ready={marketReady} className="column-hide-medium is-call" price={feedPrice.getSqueezePrice({real: true})} quote={quoteAsset} base={baseAsset} content="exchange.squeeze"/> : null}
                                                                 
                                                                 <li className="stat v-align">
-                                                                    <a  href={`/asst/${baseSymbol}`}>
+                                                                    <a  href={`/asset/${quoteSymbol}`}>
+                                                                    <span className="button ask">
+                                                                        
+                                                                        <span>
+                                                                            <span>{`${quoteSymbol}`}</span>                                
+                                                                        </span>介绍
+                                                                    </span>
+                                                                    </a>
+                                                                    <a  href={`/asset/${baseSymbol}`}>
                                                                     <span className="button bid">
                                                                     
                                                                         <span>
                                                                             <span>{`${baseSymbol}`}</span>                                
-                                                                        </span>详情
+                                                                        </span>介绍
                                                                     </span>
                                                                     </a>
                                                                 </li>
