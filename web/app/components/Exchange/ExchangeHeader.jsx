@@ -95,7 +95,7 @@ export default class ExchangeHeader extends React.Component {
                                                                 
                                                                 <li className="stat v-align">
                                                                     <a  href={`/asst/${baseSymbol}`}>
-                                                                    <span className="button bid" style={{margin-left: "0px",padding: "4px",text-transform: "none"}}>
+                                                                    <span className="button bid">
                                                                     
                                                                         <span>
                                                                             <span>{`${baseSymbol}`}</span>                                
