@@ -94,8 +94,8 @@ export default class ExchangeHeader extends React.Component {
 									<PriceStat toolTip={counterpart.translate("tooltip.margin_price")} ready={marketReady} className="column-hide-medium is-call" price={feedPrice.getSqueezePrice({real: true})} quote={quoteAsset} base={baseAsset} content="exchange.squeeze"/> : null}
                                                                 
                                                                 <li className="stat v-align">
-                                                                    <a class="" href={`/asst/${baseSymbol}`}>
-                                                                    <span class="button bid" style="margin-left: 0px; padding: 4px; text-transform: none;">
+                                                                    <a  href={`/asst/${baseSymbol}`}>
+                                                                    <span className="button bid" style={{margin-left: 0px; padding: 4px; text-transform: none;"}}>
                                                                     
                                                                         <span>
                                                                             <span>{`${baseSymbol}`}</span>                                
