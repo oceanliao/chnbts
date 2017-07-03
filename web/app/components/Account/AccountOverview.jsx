@@ -236,11 +236,10 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.borrow", {asset: symbol})}>{this._getSeparator(true)}{borrowLink}{borrowModal}</div> : null}
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
-                    <td style={{textAlign: "center"}} className="column-hide-small" data-place="bottom" data-tip={counterpart.translate("tooltip." + (includeAsset ? "hide_asset" : "show_asset"))}>
-                        <a style={{marginRight: 0}} className={includeAsset ? "order-cancel" : "action-plus"} onClick={this._hideAsset.bind(this, asset_type, includeAsset)}>
-                            <Icon name={includeAsset ? "cross-circle" : "plus-circle"} className="icon-14px" />
-                        </a>
+                    <td style={{textAlign: "center"}}>
+                        
                     </td>
+                    
                 </tr>
             );
         });
