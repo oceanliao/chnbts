@@ -233,7 +233,7 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
-                        {colla ? <BalanceComponent amount={colla} /> : null}
+                        {colla && !notCore ? <BalanceComponent amount={colla} /> : null}
                     </td>
                     
                 </tr>
@@ -376,7 +376,7 @@ class AccountOverview extends React.Component {
                 }
             });
 
-            let included = this._renderBalances(includedBalancesList, this.state.alwaysShowAssets, true);
+            let included = this._renderBalances(includedBalancesList, this.state.alwaysShowAssets, true, collateral);
             includedBalances = included.balances;
             includedOrders = included.openOrders;
             let hidden = this._renderBalances(hiddenBalancesList, this.state.alwaysShowAssets);
