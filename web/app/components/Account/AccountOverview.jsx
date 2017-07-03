@@ -43,13 +43,7 @@ class AccountOverview extends React.Component {
             alwaysShowAssets: [
                 "BTS",
                 "USD",
-                "CNY",
-                "OPEN.BTC",
-                "OPEN.USDT",
-                "OPEN.ETH",
-                "OPEN.MAID",
-                "OPEN.STEEM",
-                "OPEN.DASH"
+                "CNY"
             ]
         };
     }
@@ -310,11 +304,7 @@ class AccountOverview extends React.Component {
                                 {directMarketLink}
                                 {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.borrow", {asset: asset.get("symbol")})}> {this._getSeparator(!!directMarketLink)}{borrowLink}{borrowModal}</div> : null}
                             </td>
-                            <td style={{textAlign: "center"}} className="column-hide-small" data-place="bottom" data-tip={counterpart.translate("tooltip." + (includeAsset ? "hide_asset" : "show_asset"))}>
-                                <a style={{marginRight: 0}} className={includeAsset ? "order-cancel" : "action-plus"} onClick={this._hideAsset.bind(this, asset.get("id"), includeAsset)}>
-                                    <Icon name={includeAsset ? "cross-circle" : "plus-circle"} className="icon-14px" />
-                                </a>
-                            </td>
+                            
                         </tr>
                     );
                 }
@@ -401,9 +391,7 @@ class AccountOverview extends React.Component {
             hasOpenOrders = hiddenOrders.length || includedOrders.length;
         }
 
-        if (hiddenBalances) {
-            hiddenBalances.unshift(<tr style={{backgroundColor: "transparent"}} key="hidden"><td style={{height: 20}} colSpan="4"></td></tr>);
-        }
+        
 
         let totalBalanceList = includedBalancesList.concat(hiddenBalancesList);
         let totalBalance = totalBalanceList.size ?
