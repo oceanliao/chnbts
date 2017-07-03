@@ -92,7 +92,7 @@ class AccountOverview extends React.Component {
         this.props.router.push(route);
     }
 
-    _renderBalances(balanceList, optionalAssets, visible) {
+    _renderBalances(balanceList, optionalAssets, visible,colla) {
         const core_asset = ChainStore.getAsset("1.3.0");
         let {settings, hiddenAssets, orders} = this.props;
         let preferredUnit = settings.get("unit") || "1.3.0";
@@ -223,13 +223,9 @@ class AccountOverview extends React.Component {
                                 </a>
                             </span>
                         ) : null}
-                        {canBuy && this.props.isMyAccount ?
-                        <span>
-                            {this._getSeparator(hasBalance || hasOnOrder || canDepositWithdraw)}
-                            <a onClick={this._showDepositWithdraw.bind(this, "bridge_modal", assetName, false)}>
-                                <Translate content="exchange.buy" />
-                            </a>
-                        </span> : null}
+                        {directMarketLink}
+                        {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.borrow", {asset: symbol})}>{this._getSeparator(true)}{borrowLink}{borrowModal}</div> : null}
+                        {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
                         {directMarketLink}
@@ -237,7 +233,7 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
-                        
+                        {colla ? <BalanceComponent amount={colla} /> : null}
                     </td>
                     
                 </tr>
@@ -436,10 +432,13 @@ class AccountOverview extends React.Component {
                                     <th style={{textAlign: "right"}} className="column-hide-small"><Translate component="span" content="account.eq_value" /></th>
                                     {showAssetPercent ? <th style={{textAlign: "right"}}><Translate component="span" content="account.percent" /></th> : null}
                                     <th style={{textAlign: "center"}}>
-                                        <Translate content="account.transfer_actions" />
+                                        <Translate content="account.market_actions" />
                                     </th>
                                     <th style={{textAlign: "center"}}>
                                         <Translate content="account.market_actions" />
+                                    </th>
+                                    <th style={{textAlign: "center"}}>
+                                        <Translate content="抵押" />
                                     </th>
                                     <th></th>
                                 </tr>
