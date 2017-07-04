@@ -244,7 +244,7 @@ class AccountOverview extends React.Component {
 
 
                     <td style={{textAlign: "right"}} className="column-hide-small">
-                        {hasBalance || hasOnOrder ? <BalanceValueComponent balance={balance} toAsset={preferredUnit}/> : null}
+                        {hasBalance || hasOnOrder ? <EquivalentValueComponent amount={total_balance} fromAsset={asset_type} noDecimals={true} toAsset={preferredUnit}/> : null}
                     </td>
                     {showAssetPercent ? <td style={{textAlign: "right"}}>
                         {hasBalance ? <BalanceComponent balance={balance} asPercentage={true}/> : null}
