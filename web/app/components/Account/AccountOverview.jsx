@@ -207,6 +207,7 @@ class AccountOverview extends React.Component {
                     </td> : null}
                     <td style={{textAlign: "center"}}>
                         {transferLink}
+                        {this._getSeparator(true)}
                         {canDepositWithdraw && this.props.isMyAccount? (
                             <span>
                                 {this._getSeparator(hasBalance || hasOnOrder)}
@@ -432,13 +433,10 @@ class AccountOverview extends React.Component {
                                     <th style={{textAlign: "right"}} className="column-hide-small"><Translate component="span" content="account.eq_value" /></th>
                                     {showAssetPercent ? <th style={{textAlign: "right"}}><Translate component="span" content="account.percent" /></th> : null}
                                     <th style={{textAlign: "center"}}>
-                                        <Translate content="account.market_actions" />
+                                        <Translate content="account.transfer_actions" />
                                     </th>
                                     <th style={{textAlign: "center"}}>
                                         <Translate content="account.market_actions" />
-                                    </th>
-                                    <th style={{textAlign: "center"}}>
-                                        <Translate content="抵押" />
                                     </th>
                                     <th></th>
                                 </tr>
