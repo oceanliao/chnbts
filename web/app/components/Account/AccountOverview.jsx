@@ -197,7 +197,10 @@ class AccountOverview extends React.Component {
             balances.push(
                 <tr key={asset.get("symbol")} style={{maxWidth: "100rem"}}>
                     <td style={{textAlign: "right"}}>
-                        {hasBalance || hasOnOrder ? <BalanceComponent balance={balance} assetInfo={assetInfoLinks}/> : null}
+                        {hasBalance || hasOnOrder ? <BalanceComponent balance={balance} hide_amount={true} assetInfo={assetInfoLinks}/> : null}
+                    </td>
+                    <td style={{textAlign: "right"}}>
+                        {hasBalance || hasOnOrder ? <BalanceComponent balance={balance} hide_asset={true} assetInfo={assetInfoLinks}/> : null}
                     </td>
                     <td style={{textAlign: "right"}} className="column-hide-small">
                         {hasBalance || hasOnOrder ? <BalanceValueComponent balance={balance} toAsset={preferredUnit}/> : null}
@@ -435,6 +438,7 @@ class AccountOverview extends React.Component {
                                 <tr>
                                     {/*<th><Translate component="span" content="modal.settle.submit" /></th>*/}
                                     <th style={{textAlign: "right"}}><Translate component="span" content="account.asset" /></th>
+                                    <th style={{textAlign: "right"}}><Translate component="span" content="transfer.balances" /></th>
                                     {/*<<th style={{textAlign: "right"}}><Translate component="span" content="account.bts_market" /></th>*/}
                                     <th style={{textAlign: "right"}} className="column-hide-small"><Translate component="span" content="account.eq_value" /></th>
                                     {showAssetPercent ? <th style={{textAlign: "right"}}><Translate component="span" content="account.percent" /></th> : null}
