@@ -212,12 +212,14 @@ class AccountOverview extends React.Component {
                         <FormattedAsset
                             amount={orders[asset_type]}
                             asset={asset_type}
+                            hide_asset={true}
                         />
                     </td>
                     <td style={{textAlign: "center"}}>
                         <FormattedAsset
                             amount={orders[asset_type]}
                             asset={asset_type}
+                            hide_asset={true}
                         />
                     </td>
                     <td style={{textAlign: "center"}}>
