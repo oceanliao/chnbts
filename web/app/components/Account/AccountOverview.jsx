@@ -202,26 +202,47 @@ class AccountOverview extends React.Component {
                     <td style={{textAlign: "right"}}>
                         {hasBalance || hasOnOrder ? <BalanceComponent balance={balance} hide_asset={true} assetInfo={assetInfoLinks}/> : null}
                     </td>
+                    <td style={{textAlign: "center"}}>
+                        <FormattedAsset
+                            amount={orders[asset_type]}
+                            asset={asset_type}
+                            hide_asset={true}
+                        />
+                    </td>
+                    <td style={{textAlign: "center"}}>
+                        <FormattedAsset
+                            amount={orders[asset_type]}
+                            asset={asset_type}
+                            hide_asset={true}
+                        />
+                    </td>
+                    <td style={{textAlign: "center"}}>
+                        <FormattedAsset
+                            amount={orders[asset_type]}
+                            asset={asset_type}
+                            hide_asset={true}
+                        />
+                    </td>
+
+                    <td style={{textAlign: "center"}}>
+                        <FormattedAsset
+                            amount={orders[asset_type]}
+                            asset={asset_type}
+                            hide_asset={true}
+                        />
+                    </td>
+
+
+
+
+
                     <td style={{textAlign: "right"}} className="column-hide-small">
                         {hasBalance || hasOnOrder ? <BalanceValueComponent balance={balance} toAsset={preferredUnit}/> : null}
                     </td>
                     {showAssetPercent ? <td style={{textAlign: "right"}}>
                         {hasBalance ? <BalanceComponent balance={balance} asPercentage={true}/> : null}
                     </td> : null}
-                    <td style={{textAlign: "center"}}>
-                        <FormattedAsset
-                            amount={orders[asset_type]}
-                            asset={asset_type}
-                            hide_asset={true}
-                        />
-                    </td>
-                    <td style={{textAlign: "center"}}>
-                        <FormattedAsset
-                            amount={orders[asset_type]}
-                            asset={asset_type}
-                            hide_asset={true}
-                        />
-                    </td>
+
                     <td style={{textAlign: "center"}}>
                         {transferLink}
                         {this._getSeparator(notCore)}
@@ -441,15 +462,22 @@ class AccountOverview extends React.Component {
                                     {/*<th><Translate component="span" content="modal.settle.submit" /></th>*/}
                                     <th style={{textAlign: "right"}}><Translate component="span" content="account.asset" /></th>
                                     <th style={{textAlign: "right"}}><Translate component="span" content="transfer.balances" /></th>
-                                    {/*<<th style={{textAlign: "right"}}><Translate component="span" content="account.bts_market" /></th>*/}
-                                    <th style={{textAlign: "right"}} className="column-hide-small"><Translate component="span" content="account.eq_value" /></th>
-                                    {showAssetPercent ? <th style={{textAlign: "right"}}><Translate component="span" content="account.percent" /></th> : null}
+                                    <th style={{textAlign: "center"}}>
+                                        <Translate content="account.menu_collaterals" />
+                                    </th>
+                                    <th style={{textAlign: "center"}}>
+                                        <Translate content="account.menu_debt" />
+                                    </th>
                                     <th style={{textAlign: "center"}}>
                                         <Translate content="account.open_orders" />
                                     </th>
                                     <th style={{textAlign: "center"}}>
-                                        <Translate content="account.collaterals" />
+                                        <Translate content="account.menu_balance" />
                                     </th>
+                                    {/*<<th style={{textAlign: "right"}}><Translate component="span" content="account.bts_market" /></th>*/}
+                                    <th style={{textAlign: "right"}} className="column-hide-small"><Translate component="span" content="account.eq_value" /></th>
+                                    {showAssetPercent ? <th style={{textAlign: "right"}}><Translate component="span" content="account.percent" /></th> : null}
+
                                     <th style={{textAlign: "center"}}>
                                         <Translate content="account.market_actions" />
                                     </th>

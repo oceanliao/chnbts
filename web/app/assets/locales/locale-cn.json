@@ -76,6 +76,9 @@
     "hour_24": "日涨跌幅%",
     "recent": "近期活动",
     "name": "账户名",
+    "menu_debt": "负债",
+    "menu_collateral": "抵押",
+    "menu_balance": "总额",
     "member": {
       "stats": "资料",
       "join": "加入于",
