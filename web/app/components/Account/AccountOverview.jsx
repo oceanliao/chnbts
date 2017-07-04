@@ -173,6 +173,12 @@ class AccountOverview extends React.Component {
             const canWithdraw = canDepositWithdraw && (hasBalance && balanceObject.get("balance") != 0);
             const canBuy = !!this.props.bridgeCoins.get(symbol);
 
+            let total_balance = balanceObject.get("balance");
+
+            if (!!colla) { total_balance += colla; }
+            if (hasDebt) { total_balance -= cdebt[asset_type]; }
+            if (hasOnOrder) { total_balance += orders[asset_type]; }
+
             let onOrders = hasOnOrder ? <FormattedAsset amount={orders[asset_type]} asset={asset_type} /> : null;
 
             if (hasOnOrder) {
@@ -227,7 +233,7 @@ class AccountOverview extends React.Component {
 
                     <td style={{textAlign: "center"}}>
                         <FormattedAsset
-                            amount={orders[asset_type]}
+                            amount={total_balance}
                             asset={asset_type}
                             hide_asset={true}
                         />
