@@ -175,7 +175,7 @@ class AccountOverview extends React.Component {
 
             let total_balance = balanceObject.get("balance");
 
-            if (!!colla) { total_balance += colla; }
+            if (!!colla && !notCore) { total_balance += colla; }
             if (hasDebt) { total_balance -= cdebt[asset_type]; }
             if (hasOnOrder) { total_balance += orders[asset_type]; }
 
