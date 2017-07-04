@@ -92,7 +92,7 @@ class AccountOverview extends React.Component {
         this.props.router.push(route);
     }
 
-    _renderBalances(balanceList, optionalAssets, visible) {
+    _renderBalances(balanceList, optionalAssets, visible, colla) {
         const core_asset = ChainStore.getAsset("1.3.0");
         let {settings, hiddenAssets, orders} = this.props;
         let preferredUnit = settings.get("unit") || "1.3.0";
@@ -207,7 +207,7 @@ class AccountOverview extends React.Component {
                     </td> : null}
                     <td style={{textAlign: "center"}}>
                         {transferLink}
-                        {this._getSeparator(true)}
+                        {this._getSeparator(notCore)}
                         {canDepositWithdraw && this.props.isMyAccount? (
                             <span>
                                 {this._getSeparator(hasBalance || hasOnOrder)}
@@ -234,7 +234,7 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
-                        
+                        {!notCore ? {colla} :null}
                     </td>
                     
                 </tr>
@@ -377,7 +377,7 @@ class AccountOverview extends React.Component {
                 }
             });
 
-            let included = this._renderBalances(includedBalancesList, this.state.alwaysShowAssets, true);
+            let included = this._renderBalances(includedBalancesList, this.state.alwaysShowAssets, true, collateral);
             includedBalances = included.balances;
             includedOrders = included.openOrders;
             let hidden = this._renderBalances(hiddenBalancesList, this.state.alwaysShowAssets);
@@ -437,6 +437,9 @@ class AccountOverview extends React.Component {
                                     </th>
                                     <th style={{textAlign: "center"}}>
                                         <Translate content="account.market_actions" />
+                                    </th>
+                                    <th style={{textAlign: "center"}}>
+                                        <Translate content="account.collaterals" />
                                     </th>
                                     <th></th>
                                 </tr>
