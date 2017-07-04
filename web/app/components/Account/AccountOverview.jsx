@@ -235,7 +235,7 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
-                        {utils.format_number(colla, 2)}
+                        {utils.format_number(1000, 2)}
                     </td>
                     
                 </tr>
