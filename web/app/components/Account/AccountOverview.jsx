@@ -25,7 +25,6 @@ import SimpleDepositWithdraw from "../Dashboard/SimpleDepositWithdraw";
 import SimpleDepositBlocktradesBridge from "../Dashboard/SimpleDepositBlocktradesBridge";
 import { Apis } from "bitsharesjs-ws";
 import GatewayActions from "actions/GatewayActions";
-import utils from "common/utils";
 
 class AccountOverview extends React.Component {
 
@@ -235,7 +234,7 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
-                        1000
+
                     </td>
                     
                 </tr>
