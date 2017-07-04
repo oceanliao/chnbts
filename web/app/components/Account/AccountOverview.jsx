@@ -463,7 +463,7 @@ class AccountOverview extends React.Component {
                                     <th style={{textAlign: "right"}}><Translate component="span" content="account.asset" /></th>
                                     <th style={{textAlign: "right"}}><Translate component="span" content="transfer.balances" /></th>
                                     <th style={{textAlign: "center"}}>
-                                        <Translate content="account.menu_collaterals" />
+                                        <Translate content="account.menu_collateral" />
                                     </th>
                                     <th style={{textAlign: "center"}}>
                                         <Translate content="account.menu_debt" />
