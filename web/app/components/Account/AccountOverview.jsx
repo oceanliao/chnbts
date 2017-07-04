@@ -234,7 +234,10 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
-
+                        <FormattedAsset
+                            amount={orders[asset_type]}
+                            asset={asset_type}
+                        />
                     </td>
                     
                 </tr>
