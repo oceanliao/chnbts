@@ -168,6 +168,7 @@ class AccountOverview extends React.Component {
             const includeAsset = !hiddenAssets.includes(asset_type);
             const hasBalance = !!balanceObject.get("balance");
             const hasOnOrder = !!orders[asset_type];
+            const hasDebt= !!cdebt[asset_type];
             const canDepositWithdraw = !!this.props.backedCoins.get("OPEN", []).find(a => a.symbol === asset.get("symbol"));
             const canWithdraw = canDepositWithdraw && (hasBalance && balanceObject.get("balance") != 0);
             const canBuy = !!this.props.bridgeCoins.get(symbol);
@@ -203,18 +204,18 @@ class AccountOverview extends React.Component {
                         {hasBalance || hasOnOrder ? <BalanceComponent balance={balance} hide_asset={true} assetInfo={assetInfoLinks}/> : null}
                     </td>
                     <td style={{textAlign: "center"}}>
-                        <FormattedAsset
+                        {!notCore ? <FormattedAsset
                             amount={colla}
                             asset={asset_type}
                             hide_asset={true}
-                        />
+                        /> :null }
                     </td>
                     <td style={{textAlign: "center"}}>
-                        <FormattedAsset
-                            amount={orders[asset_type]}
+                        { hasDebt ? <FormattedAsset
+                            amount={cdebt[asset_type]}
                             asset={asset_type}
                             hide_asset={true}
-                        />
+                        /> :null }
                     </td>
                     <td style={{textAlign: "center"}}>
                         <FormattedAsset

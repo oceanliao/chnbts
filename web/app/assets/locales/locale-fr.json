@@ -61,6 +61,9 @@
     "recent": "Activité recent",
     "name": "Nom du compte",
     "more": "voir plus",
+    "menu_debt": "负债",
+    "menu_collateral": "抵押",
+    "menu_balance": "总额",
     "member": {
       "stats": "Stats membre",
       "join": "Inscription",
