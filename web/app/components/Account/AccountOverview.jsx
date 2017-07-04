@@ -92,7 +92,7 @@ class AccountOverview extends React.Component {
         this.props.router.push(route);
     }
 
-    _renderBalances(balanceList, optionalAssets, visible, colla) {
+    _renderBalances(balanceList, optionalAssets, visible, colla ,cdebt) {
         const core_asset = ChainStore.getAsset("1.3.0");
         let {settings, hiddenAssets, orders} = this.props;
         let preferredUnit = settings.get("unit") || "1.3.0";
@@ -204,7 +204,7 @@ class AccountOverview extends React.Component {
                     </td>
                     <td style={{textAlign: "center"}}>
                         <FormattedAsset
-                            amount={orders[asset_type]}
+                            amount={colla}
                             asset={asset_type}
                             hide_asset={true}
                         />
@@ -409,7 +409,7 @@ class AccountOverview extends React.Component {
                 }
             });
 
-            let included = this._renderBalances(includedBalancesList, this.state.alwaysShowAssets, true, collateral);
+            let included = this._renderBalances(includedBalancesList, this.state.alwaysShowAssets, true, collateral , debt);
             includedBalances = included.balances;
             includedOrders = included.openOrders;
             let hidden = this._renderBalances(hiddenBalancesList, this.state.alwaysShowAssets);
