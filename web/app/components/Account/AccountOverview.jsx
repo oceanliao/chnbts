@@ -206,6 +206,18 @@ class AccountOverview extends React.Component {
                         {hasBalance ? <BalanceComponent balance={balance} asPercentage={true}/> : null}
                     </td> : null}
                     <td style={{textAlign: "center"}}>
+                        <FormattedAsset
+                            amount={orders[asset_type]}
+                            asset={asset_type}
+                        />
+                    </td>
+                    <td style={{textAlign: "center"}}>
+                        <FormattedAsset
+                            amount={orders[asset_type]}
+                            asset={asset_type}
+                        />
+                    </td>
+                    <td style={{textAlign: "center"}}>
                         {transferLink}
                         {this._getSeparator(notCore)}
                         {canDepositWithdraw && this.props.isMyAccount? (
@@ -228,17 +240,8 @@ class AccountOverview extends React.Component {
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.borrow", {asset: symbol})}>{this._getSeparator(true)}{borrowLink}{borrowModal}</div> : null}
                         {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
                     </td>
-                    <td style={{textAlign: "center"}}>
-                        {directMarketLink}
-                        {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.borrow", {asset: symbol})}>{this._getSeparator(true)}{borrowLink}{borrowModal}</div> : null}
-                        {isBitAsset ? <div className="inline-block" data-place="bottom" data-tip={counterpart.translate("tooltip.settle", {asset: symbol})}>{this._getSeparator(true)}{settleLink}</div> : null}
-                    </td>
-                    <td style={{textAlign: "center"}}>
-                        <FormattedAsset
-                            amount={orders[asset_type]}
-                            asset={asset_type}
-                        />
-                    </td>
+
+
                     
                 </tr>
             );
@@ -436,14 +439,15 @@ class AccountOverview extends React.Component {
                                     <th style={{textAlign: "right"}} className="column-hide-small"><Translate component="span" content="account.eq_value" /></th>
                                     {showAssetPercent ? <th style={{textAlign: "right"}}><Translate component="span" content="account.percent" /></th> : null}
                                     <th style={{textAlign: "center"}}>
-                                        <Translate content="account.transfer_actions" />
-                                    </th>
-                                    <th style={{textAlign: "center"}}>
-                                        <Translate content="account.market_actions" />
+                                        <Translate content="account.open_orders" />
                                     </th>
                                     <th style={{textAlign: "center"}}>
                                         <Translate content="account.collaterals" />
                                     </th>
+                                    <th style={{textAlign: "center"}}>
+                                        <Translate content="account.market_actions" />
+                                    </th>
+
                                     <th></th>
                                 </tr>
                             </thead>
