@@ -173,9 +173,9 @@ class AccountOverview extends React.Component {
             const canWithdraw = canDepositWithdraw && (hasBalance && balanceObject.get("balance") != 0);
             const canBuy = !!this.props.bridgeCoins.get(symbol);
 
-            let total_balance = balanceObject.get("balance");
+            let total_balance = parseFloat(balanceObject.get("balance"));
 
-            if (!!colla && !notCore) { total_balance += colla; }
+            if (!!colla && !notCore) { total_balance += parseFloat(colla); }
             if (hasDebt) { total_balance -= cdebt[asset_type]; }
             if (hasOnOrder) { total_balance += orders[asset_type]; }
 
