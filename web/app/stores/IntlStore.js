@@ -3,6 +3,7 @@ import IntlActions from "actions/IntlActions";
 import SettingsActions from "actions/SettingsActions";
 import counterpart from "counterpart";
 var locale_en = require("json-loader!assets/locales/locale-en");
+var locale_cn = require("json-loader!assets/locales/locale-cn");
 import ls from "common/localStorage";
 let ss = new ls("__graphene__");
 
@@ -31,10 +32,10 @@ addLocaleData(ru);
 
 class IntlStore {
     constructor() {
-        this.currentLocale = ss.has("settings_v3") ? ss.get("settings_v3").locale : "en";
+        this.currentLocale = ss.has("settings_v3") ? ss.get("settings_v3").locale : "cn";
 
-        this.locales = ["en"];
-        this.localesObject = {en: locale_en};
+        this.locales = ["cn"];
+        this.localesObject = {cn: locale_cn};
 
         this.bindListeners({
             onSwitchLocale: IntlActions.switchLocale,
