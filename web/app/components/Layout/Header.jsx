@@ -260,16 +260,7 @@ class Header extends React.Component {
                             <span><Translate content="header.settings" /></span>
                         </a>
                     </li>
-                    <li>
-                        <a href onClick={this._onNavigate.bind(this, "/explorer")}>
-                            <span><Translate content="header.explorer" /></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href onClick={this._onNavigate.bind(this, "/help")}>
-                            <span><Translate content="header.help" /></span>
-                        </a>
-                    </li>
+                    
                 </ul>
             </ActionSheet.Content>
         </ActionSheet>;
@@ -328,6 +319,7 @@ class Header extends React.Component {
                         {!(currentAccount || myAccounts.length) ? <li><a className={cnames({active: active.indexOf("explorer") !== -1})} onClick={this._onNavigate.bind(this, "/explorer")}><Translate component="span" content="header.explorer" /></a></li> : null}
                         <li>{tradeLink}</li>
                         {enableDepositWithdraw && currentAccount && myAccounts.indexOf(currentAccount) !== -1 ? <li><Link to={"/deposit-withdraw/"} activeClassName="active"><Translate content="account.deposit_withdraw"/></Link></li> : null}
+                         <li><a onClick={this._onNavigate.bind(this, "http://1001coin.com")}><Translate component="span" content="header.home_link" /></a></li>
                     </ul>
                 </div>
                 <div className="grid-block show-for-medium shrink">

@@ -28,8 +28,8 @@ class Settings extends React.Component {
             activeSetting,
             menuEntries,
             settingEntries: {
-                general: ["locale", "unit", "showSettles", "walletLockTimeout", "themes",
-                 "passwordLogin", "reset"],
+                general: ["locale", "unit",  "walletLockTimeout", "themes",
+                  "reset"],
                 access: ["apiServer", "faucet_address"]
             }
         };
