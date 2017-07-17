@@ -191,6 +191,82 @@ class Dashboard extends React.Component {
         }
 
         let validMarkets = 0;
+        
+        let marketsList = {
+            "ico":[
+                
+                ["CNY", "YOYOW"],
+                ["BTS", "BTWTY"],
+                ["BTS", "OBITS"],
+                ["BTS", "ICOO"]
+            ],
+            "general": [
+                ["USD", "BTS"],
+                ["USD", "OPEN.BTC"],
+                ["USD", "OPEN.USDT"],
+                ["USD", "OPEN.ETH"],
+                ["USD", "OPEN.DASH"],
+                ["BTS", "CNY"],
+                ["CNY", "OPEN.BTC"],
+                ["CNY", "USD"],
+                ["CNY", "OPEN.ETH"],
+                ["CNY", "YOYOW"],
+                ["OPEN.BTC", "BTS"],
+                ["OPEN.BTC", "OPEN.DASH"],
+                ["OPEN.BTC", "EOS"],
+                ["BTS", "GOLD"],
+                ["BTS", "BLOCKPAY"],
+                ["OPEN.BTC", "BLOCKPAY"],
+                ["BTS", "BTWTY"],
+                ["BTS", "OBITS"],
+                ["KAPITAL", "OPEN.BTC"],
+                ["BTS", "SILVER"],
+                ["OPEN.BTC", "OPEN.DGD"],
+                ["USD", "OPEN.STEEM"],
+                ["USD", "OPEN.MAID"],
+                ["USD", "GOLD"],
+                ["BTS", "OPEN.ETH"],
+                ["BTS", "ICOO"],
+                ["OPEN.BTC", "OPEN.STEEM"],
+                ["OPEN.USDT", "OPEN.BTC"],
+                ["BTS", "OPEN.STEEM"],
+                ["OPEN.BTC", "ICOO"],
+                ["OPEN.BTC", "OPEN.MAID"],
+                ["BTS", "OPEN.MAID"],
+                ["BTS", "OPEN.HEAT"],
+                ["BTS", "OPEN.INCENT"],
+                ["OPEN.BTC", "OBITS"],
+                ["HEMPSWEET", "OPEN.BTC"]
+            ]
+        };
+        
+        let ico_markets = marketsList["ico"]
+        // .sort(this._sortMarketsByVolume)
+        .map(pair => {
+            let isLowVolume = this.props.lowVolumeMarkets.get(pair[1] + "_" + pair[0]) || this.props.lowVolumeMarkets.get(pair[0] + "_" + pair[1]);
+            if (!isLowVolume) validMarkets++;
+            let className = "";
+            if (validMarkets > 9) {
+                className += ` show-for-${!accountCount ? "xlarge" : "large"}`;
+            } else if (validMarkets > 6) {
+                className += ` show-for-${!accountCount ? "large" : "medium"}`;
+            }
+
+            return (
+                <MarketCard
+                    key={pair[0] + "_" + pair[1]}
+                    marketId={pair[1] + "_" + pair[0]}
+                    new={newAssets.indexOf(pair[1]) !== -1}
+                    className={className}
+                    quote={pair[0]}
+                    base={pair[1]}
+                    invert={pair[2]}
+                    isLowVolume={isLowVolume}
+                    hide={validMarkets > 16}
+                />
+            );
+        }).filter(a => !!a);
+        
 
         let markets = featuredMarkets
         // .sort(this._sortMarketsByVolume)
@@ -247,7 +323,7 @@ class Dashboard extends React.Component {
                             </div>
                             <Translate content="exchange.featured" component="h4" style={{paddingLeft: 30}}/>
                             <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
-                                {markets}
+                                {ico_markets}
                             </div>
                         </div>
                         
@@ -270,7 +346,7 @@ class Dashboard extends React.Component {
                     <Translate content="exchange.featured"/>
                     </div>
                     <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
-                        {markets}
+                        {ico_markets}
                     </div>
 
                     {accountCount ? <div className="generic-bordered-box" style={{marginBottom: 5}}>
