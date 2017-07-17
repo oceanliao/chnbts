@@ -9,6 +9,12 @@
     "tr": "Türkçe"
   },
   "header": {
+        "home_link": "HOME",
+    "forum_link": "FORUM",
+    "qq_group": "QQ",
+    "new_link": "HELP",
+    "ico_link": "ICO",
+    "service_link": "SUPPORT", 
     "title": "BitShares - Interfaz de Usiario",
     "account": "Cuenta",
     "dashboard": "Tablero",

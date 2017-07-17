@@ -9,6 +9,12 @@
     "tr": "Turkish"
   },
   "header": {
+        "home_link": "HOME",
+    "forum_link": "FORUM",
+    "qq_group": "QQ",
+    "new_link": "HELP",
+    "ico_link": "ICO",
+    "service_link": "SUPPORT", 
     "title": "비트쉐어 2.0",
     "account": "계정",
     "dashboard": "전체보기",
