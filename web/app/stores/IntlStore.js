@@ -74,7 +74,7 @@ class IntlStore {
     }
 
     onClearSettings() {
-        this.onSwitchLocale({locale: "en"});
+        this.onSwitchLocale({locale: "cn"});
     }
 }
 

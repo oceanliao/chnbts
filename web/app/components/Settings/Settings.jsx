@@ -29,7 +29,7 @@ class Settings extends React.Component {
             menuEntries,
             settingEntries: {
                 general: ["locale", "unit", "showSettles", "walletLockTimeout", "themes",
-                "disableChat", "showAssetPercent", "passwordLogin", "reset"],
+                 "passwordLogin", "reset"],
                 access: ["apiServer", "faucet_address"]
             }
         };

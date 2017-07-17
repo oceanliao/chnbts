@@ -59,11 +59,11 @@
       "borrow": "从系统借出 %(asset)s 。这将创建一个智能合约，冻结你的抵押物，直到你调整仓位或进行平仓。"
   },
   "account": {
-    "intro_text_title": "欢迎来到比特股去中心化交易所！",
-    "intro_text_1": "<b>比特股2.0</b>是一个基于区块链构建的去中心化交易所，该交易所通称DEX, DEX有着工业级的业务处理能力，能够永不停歇地提供公正和透明的服务，这里有比特股首创的bitCNY,bitUSD等智能货币，用户可以在这里根据自己的需要.",
-    "intro_text_2": "发行用户定义资产（UIA）,也可以买卖通用的数字资产如BTC, ETH等。",
-    "intro_text_3": "来比特股尽情享受交易的乐趣吧！",
-    "intro_text_4": "<br/>官网：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://bitshares.org'>https://bitshares.org</a><br/>论坛：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://bitsharestalk.org'>https://bitsharestalk.org</a><br/>QQ群：&nbsp;&nbsp;423951676<br/>Github：<a target='_blank' rel='noopener noreferrer' href='https://github.com/bitshares/bitshares-core'>https://github.com/bitshares/bitshares-core</a>",
+    "intro_text_title": "欢迎来到秋千区块链交易所！",
+    "intro_text_1": "<b>秋千区块链交易所</b>是一个基于区块链构建的去中心化交易所，秋千不仅有工业级别的业务处理能力，并且因为架设在区块链之上，所以能够永不停歇地提供公正和透明的ico发行及代币交易服务。",
+    "intro_text_2": "您永远不用担心存储在秋千的数字货币的安全性，因为这些属于您的资产不属于秋千集中掌控，而是在区块链中永久的安全存储着。您只需要保管好您的钱包备份或者私钥，就可以在任何时间和任何地区，还原您的钱包及并使用秋千交易所。",
+    "intro_text_3": "秋千交易所会持续地提供ico发行服务，帮助有潜力的区块链项目在秋千交易所发行ico代币，所以您可以利用系统内建的智能货币非常方便地参与您看好的ico，并且代币立即可以进行交易！<br/><b>更便捷安全的ico参与体验，更公正透明的代币流动性，尽在秋千交易所。</b>",
+    "intro_text_4": "<br/>官网：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://1001coin.com'>https://1001coin.com</a><br/>论坛：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://1001coin.com'>https://1001coin.com</a><br/>QQ群：&nbsp;&nbsp;16413676<br/>微博：<a target='_blank' rel='noopener noreferrer' href='https://weibo.com'>https://weibo.com/1001coin</a>",
     "in_open": "这是你委单中 %(asset)s 资产的数量。",
     "in_open_value": "这是你委单中 %(asset)s 资产的大致价值。",
     "transfer_actions": "转账操作",
