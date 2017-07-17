@@ -245,13 +245,12 @@ class Dashboard extends React.Component {
                             <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
                                 {markets}
                             </div>
-                        </div>
-                        <div className="grid-container small-12 medium-7" style={{paddingTop: 44}}>
                             <Translate content="exchange.featured" component="h4" style={{paddingLeft: 30}}/>
                             <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
                                 {markets}
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             );
@@ -260,6 +259,13 @@ class Dashboard extends React.Component {
         return (
             <div ref="wrapper" className="grid-block page-layout vertical">
                 <div ref="container" className="grid-container" style={{padding: "25px 10px 0 10px"}}>
+                    <div className="block-content-header" style={{marginBottom: 15}}>
+                    <Translate content="exchange.featured"/>
+                    </div>
+                    <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
+                        {markets}
+                    </div>
+                    
                     <div className="block-content-header" style={{marginBottom: 15}}>
                     <Translate content="exchange.featured"/>
                     </div>
