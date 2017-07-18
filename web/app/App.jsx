@@ -162,16 +162,7 @@ class App extends React.Component {
                         <div className="grid-block vertical">
                             {this.props.children}
                         </div>
-                        <div className="grid-block shrink" style={{overflow: "hidden"}}>
-                            {isMobile ? null :
-                                <Chat
-                                    showChat={showChat}
-                                    disable={disableChat}
-                                    footerVisible={showFooter}
-                                    dockedChat={dockedChat}
-                                />}
-
-                        </div>
+                        
                     </div>
                     {showFooter ? <Footer synced={this.state.synced}/> : null}
                     <ReactTooltip ref="tooltip" place="top" type={theme === "lightTheme" ? "dark" : "light"} effect="solid"/>
