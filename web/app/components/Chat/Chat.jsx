@@ -18,7 +18,7 @@ import TimeAgo from "../Utility/TimeAgo";
 
 const PROD = true;
 const hostConfig = PROD ? { // Prod config
-    host: "bitshares.openledger.info",
+    host: "trade.1001coin.com",
     path: "/trollbox",
     secure: true,
     port: 443
