@@ -315,10 +315,17 @@ class Dashboard extends React.Component {
                     </div>
                     
                     <div className="block-content-header" style={{marginBottom: 15}}>
-                    <Translate content="exchange.featured"/>
+                    <Translate content="exchange.ico"/>
                     </div>
                     <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
                         {ico_markets}
+                    </div>
+                    
+                    <div className="block-content-header" style={{marginBottom: 15}}>
+                    <Translate content="exchange.special"/>
+                    </div>
+                    <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
+                        {special_markets}
                     </div>
 
                     {accountCount ? <div className="generic-bordered-box" style={{marginBottom: 5}}>
