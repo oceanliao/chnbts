@@ -318,11 +318,11 @@ class Header extends React.Component {
                         {currentAccount || myAccounts.length ? <li><a className={cnames({active: active.indexOf("transfer") !== -1})} onClick={this._onNavigate.bind(this, "/transfer")}><Translate component="span" content="header.payments" /></a></li> : null}
                         <li>{tradeLink}</li>
                         {enableDepositWithdraw && currentAccount && myAccounts.indexOf(currentAccount) !== -1 ? <li><Link to={"/deposit-withdraw/"} activeClassName="active"><Translate content="account.deposit_withdraw"/></Link></li> : null}
-                         <li><a href="http://1001coin.com" target="_blank"><Translate component="span" content="header.home_link" /></a></li>
-                         <li><a href="http://1001coin.com/newbie" target="_blank"><Translate component="span" content="header.new_link" /></a></li>
-                         <li><a href="http://1001coin.com/forum" target="_blank"><Translate component="span" content="header.forum_link" /></a></li>
-                         <li><a href="http://1001coin.com/ico" target="_blank"><Translate component="span" content="header.ico_link" /></a></li>
-                         <li><a href="http://1001coin.com/support" target="_blank"><Translate component="span" content="header.service_link" /></a></li>
+                         <li><a href="http://1001ico.com" target="_blank"><Translate component="span" content="header.home_link" /></a></li>
+                         <li><a href="http://1001ico.com/newbie" target="_blank"><Translate component="span" content="header.new_link" /></a></li>
+                         <li><a href="http://1001ico.com/forum" target="_blank"><Translate component="span" content="header.forum_link" /></a></li>
+                         <li><a href="http://1001ico.com/ico" target="_blank"><Translate component="span" content="header.ico_link" /></a></li>
+                         <li><a href="http://1001ico.com/support" target="_blank"><Translate component="span" content="header.service_link" /></a></li>
                     </ul>
                 </div>
                 <div className="grid-block show-for-medium shrink">
