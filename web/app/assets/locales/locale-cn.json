@@ -919,6 +919,8 @@
     "zoom_all": "显示全部",
     "settings": "图表选项",
     "featured": "热门市场",
+     "ico": "ICO市场",
+     "special": "特色资产",   
     "new": "新增",
     "market_frozen": "%(asset)s 资产发行人已禁用该资产的市场交易",
     "show_star_1": "显示",
