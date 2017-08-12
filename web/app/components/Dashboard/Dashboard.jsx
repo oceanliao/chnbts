@@ -167,7 +167,7 @@ class Dashboard extends React.Component {
         let marketsList = {
             "ico":[
                 
-                ["CNY", "YOYOW"],
+                ["CNY", "VEN.WARRANT"],
                 ["CNY", "OCT"],
                 ["BTS", "OBITS"],
                 ["BTS", "ICOO"]
