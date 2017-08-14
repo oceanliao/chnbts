@@ -168,7 +168,7 @@ class Dashboard extends React.Component {
             "ico":[
                 
                 ["CNY", "VEN.WARRANT"],
-                ["CNY", "OCT"],
+                ["CNY", "VEN"],
                 ["BTS", "OBITS"],
                 ["BTS", "ICOO"]
             ],
