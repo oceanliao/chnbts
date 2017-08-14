@@ -319,9 +319,10 @@ class Header extends React.Component {
                         <li>{tradeLink}</li>
                         {enableDepositWithdraw && currentAccount && myAccounts.indexOf(currentAccount) !== -1 ? <li><Link to={"/deposit-withdraw/"} activeClassName="active"><Translate content="account.deposit_withdraw"/></Link></li> : null}
                         <li><a href="https://trade.1001ico.com/market/VEN.WARRANT_CNY" target="_blank"><Translate component="span" content="header.ico_link" /></a></li>
+                        <li><a href="https://trade.1001ico.com/market/VEN_CNY" target="_blank"><Translate component="span" content="header.forum_link" /></a></li>
                          <li><a href="http://1001ico.com" target="_blank"><Translate component="span" content="header.home_link" /></a></li>
                          <li><a href="http://1001ico.com/neo/" target="_blank"><Translate component="span" content="header.new_link" /></a></li>
-                         <li><a href="http://1001ico.com/forum.php" target="_blank"><Translate component="span" content="header.forum_link" /></a></li>
+                         
                          
                          <li><a href="http://1001ico.com/support/" target="_blank"><Translate component="span" content="header.service_link" /></a></li>
                     </ul>

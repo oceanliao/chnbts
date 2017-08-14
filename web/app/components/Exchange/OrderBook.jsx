@@ -265,7 +265,7 @@ class OrderBook extends React.Component {
                 if (this.state.showAllBids || combinedBids.length <= rowCount) {
                     return true;
                 }
-                return a.getPrice() >= highestBid.getPrice() / 5;
+                return a.getPrice() >= highestBid.getPrice() / 100;
             })
             .map((order, index) => {
                 return (horizontal ?
