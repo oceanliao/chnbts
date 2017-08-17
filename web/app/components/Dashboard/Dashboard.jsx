@@ -168,8 +168,8 @@ class Dashboard extends React.Component {
             "ico":[
                 
                 ["CNY", "VEN.WARRANT"],
-                ["CNY", "VEN"],
-                ["BTS", "OBITS"],
+                ["QCNY", "VEN"],
+                ["CNY", "QCNY"],
                 ["BTS", "ICOO"]
             ],
             "special": [
@@ -285,18 +285,12 @@ class Dashboard extends React.Component {
                             </div>
                         </div>
                         <div className="grid-container small-12 medium-7" style={{paddingTop: 44}}>
-                            <Translate content="exchange.featured" component="h4" style={{paddingLeft: 30}}/>
-                            <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
-                                {markets}
-                            </div>
+                            
                             <Translate content="exchange.ico" component="h4" style={{paddingLeft: 30}}/>
                             <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
                                 {ico_markets}
                             </div>
-                            <Translate content="exchange.special" component="h4" style={{paddingLeft: 30}}/>
-                            <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
-                                {special_markets}
-                            </div>
+                            
                         </div>
                         
                     </div>
