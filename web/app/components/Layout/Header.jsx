@@ -316,12 +316,11 @@ class Header extends React.Component {
                         <li>{dashboard}</li>
                         {!currentAccount ? null : <li><Link to={`/account/${currentAccount}/overview`} className={cnames({active: active.indexOf("account/") !== -1})}><Translate content="header.account" /></Link></li>}
                         {currentAccount || myAccounts.length ? <li><a className={cnames({active: active.indexOf("transfer") !== -1})} onClick={this._onNavigate.bind(this, "/transfer")}><Translate component="span" content="header.payments" /></a></li> : null}
-                        <li>{tradeLink}</li>
-                        {enableDepositWithdraw && currentAccount && myAccounts.indexOf(currentAccount) !== -1 ? <li><Link to={"/deposit-withdraw/"} activeClassName="active"><Translate content="account.deposit_withdraw"/></Link></li> : null}
                         
-                        <li><a href="https://trade.1001ico.com/market/VEN_QCNY" target="_blank"><Translate component="span" content="header.forum_link" /></a></li>
+                        <li><a href="https://trade.1001ico.com/dashboard"><Translate component="span" content="header.home_link" /></a></li>
+                        
+                        <li><a href="https://trade.1001ico.com/market/BCDN.WARRANT_QCNY" target="_blank"><Translate component="span" content="header.forum_link" /></a></li>
                         <li><a href="https://trade.1001ico.com/market/QCNY_CNY" target="_blank"><Translate component="span" content="header.ico_link" /></a></li>
-                         <li><a href="http://1001ico.com" target="_blank"><Translate component="span" content="header.home_link" /></a></li>
                          <li><a href="http://1001ico.com/neo/" target="_blank"><Translate component="span" content="header.new_link" /></a></li>
                          
                          

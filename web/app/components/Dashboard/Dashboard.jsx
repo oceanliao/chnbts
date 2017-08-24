@@ -167,10 +167,14 @@ class Dashboard extends React.Component {
         let marketsList = {
             "ico":[
                 
-                ["CNY", "VEN.WARRANT"],
+                
                 ["QCNY", "VEN"],
+                ["CNY", "VEN"],
                 ["CNY", "QCNY"],
-                ["BTS", "ICOO"]
+                ["CNY", "VEN.WARRANT"],
+                ["QCNY", "BCDN.WARRANT"],
+                ["QCNY", "BCDN"],
+                ["CNY", "BCDN"],
             ],
             "special": [
                 
@@ -186,6 +190,7 @@ class Dashboard extends React.Component {
         .map(pair => {
             let isLowVolume = this.props.lowVolumeMarkets.get(pair[1] + "_" + pair[0]) || this.props.lowVolumeMarkets.get(pair[0] + "_" + pair[1]);
             if (!isLowVolume) validMarkets++;
+            // validMarkets++;
             let className = "";
             if (validMarkets > 9) {
                 className += ` show-for-${!accountCount ? "xlarge" : "large"}`;
@@ -301,12 +306,7 @@ class Dashboard extends React.Component {
         return (
             <div ref="wrapper" className="grid-block page-layout vertical">
                 <div ref="container" className="grid-container" style={{padding: "25px 10px 0 10px"}}>
-                    <div className="block-content-header" style={{marginBottom: 15}}>
-                    <Translate content="exchange.featured"/>
-                    </div>
-                    <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
-                        {markets}
-                    </div>
+                    
                     
                     <div className="block-content-header" style={{marginBottom: 15}}>
                     <Translate content="exchange.ico"/>
@@ -315,37 +315,11 @@ class Dashboard extends React.Component {
                         {ico_markets}
                     </div>
                     
-                    <div className="block-content-header" style={{marginBottom: 15}}>
-                    <Translate content="exchange.special"/>
-                    </div>
-                    <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
-                        {special_markets}
-                    </div>
+                    
 
-                    {accountCount ? <div className="generic-bordered-box" style={{marginBottom: 5}}>
-                        <div className="block-content-header" style={{marginBottom: 15}}>
-                            <Translate content="account.accounts" />
-                        </div>
-                        <div className="box-content">
-                            <DashboardList
-                                accounts={Immutable.List(names)}
-                                ignoredAccounts={Immutable.List(ignored)}
-                                width={width}
-                                onToggleIgnored={this._onToggleIgnored.bind(this)}
-                                showIgnored={showIgnored}
-                            />
-                            {/* {showIgnored ? <DashboardList accounts={Immutable.List(ignored)} width={width} /> : null} */}
-                        </div>
-                    </div> : null}
+                    
 
-                    {accountCount ? <RecentTransactions
-                        style={{marginBottom: 20, marginTop: 20}}
-                        accountsList={linkedAccounts}
-                        limit={10}
-                        compactView={false}
-                        fullHeight={true}
-                        showFilters={true}
-                    /> : null}
+                    
 
                 </div>
             </div>

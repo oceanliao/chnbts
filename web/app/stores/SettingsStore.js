@@ -149,7 +149,7 @@ class SettingsStore {
             // Default markets setup
             let topMarkets = {
                 markets_4018d784: [ // BTS MAIN NET
-                    "VEN", "BTS", "CNY","QCNY","VEN.WARRANT"
+                    "VEN", "BTS", "CNY","QCNY","VEN.WARRANT","BCDN.WARRANT","BCDN"
                 ],
                 markets_39f5e2ed: [ // TESTNET
                     "PEG.FAKEUSD", "BTWTY"
