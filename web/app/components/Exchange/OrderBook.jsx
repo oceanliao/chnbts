@@ -347,7 +347,7 @@ class OrderBook extends React.Component {
             let leftHeader = (
                 <thead ref="leftHeader">
                     <tr key="top-header" className="top-header">
-                        <th style={{width: "25%", textAlign: "center"}}><Translate className="header-sub-title" content="exchange.total" /><span className="header-sub-title"> (<AssetName dataPlace="top" name={baseSymbol} />)</span></th>
+                        <th style={{width: "25%", textAlign: "center"}}><Translate className="header-sub-title" content="exchange.totalorder" /><span className="header-sub-title"> (<AssetName dataPlace="top" name={baseSymbol} />)</span></th>
                         <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName dataPlace="top" name={baseSymbol} /></span></th>
                         <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName dataPlace="top" name={quoteSymbol} /></span></th>
                         <th style={{width: "25%", textAlign: "right"}}>
@@ -365,7 +365,7 @@ class OrderBook extends React.Component {
                         </th>
                         <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName dataPlace="top" name={quoteSymbol} /></span></th>
                         <th style={{width: "25%", textAlign: "center"}}><span className="header-sub-title"><AssetName dataPlace="top" name={baseSymbol} /></span></th>
-                        <th style={{width: "25%", textAlign: "right"}}><Translate className="header-sub-title" content="exchange.total" /><span className="header-sub-title"> (<AssetName dataPlace="top" name={baseSymbol} />)</span></th>
+                        <th style={{width: "25%", textAlign: "right"}}><Translate className="header-sub-title" content="exchange.totalorder" /><span className="header-sub-title"> (<AssetName dataPlace="top" name={baseSymbol} />)</span></th>
                     </tr>
                 </thead>
             );
@@ -382,7 +382,7 @@ class OrderBook extends React.Component {
                                         {!this.props.smallScreen ? <span onClick={this.props.moveOrderBook} style={{cursor: "pointer", fontSize: "1rem"}}> &#8645;</span> : null}
                                     </span>) : null}
                                     <div style={{lineHeight: "16px"}} className="float-right header-sub-title">
-                                        <Translate content="exchange.total" />
+                                        <Translate content="exchange.totalorder" />
                                         <span>: </span>
                                         {utils.format_number(totalAsks, quote.get("precision"))}
                                         <span> (<AssetName name={quoteSymbol} />)</span>
@@ -423,7 +423,7 @@ class OrderBook extends React.Component {
                                         <span onClick={this.props.moveOrderBook} style={{cursor: "pointer", fontSize: "1rem"}}> &#8645;</span>
                                     </span>) : null}
                                     <div style={{lineHeight: "16px"}} className="float-right header-sub-title">
-                                        <Translate content="exchange.total" />
+                                        <Translate content="exchange.totalorder" />
                                         <span>: </span>
                                         {utils.format_number(totalBids, base.get("precision"))}
                                         <span> (<AssetName name={baseSymbol} />)</span>

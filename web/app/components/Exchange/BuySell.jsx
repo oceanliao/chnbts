@@ -158,7 +158,7 @@ class BuySell extends React.Component {
 
                                 <div className="grid-block no-padding buy-sell-row">
                                     <div className="grid-block small-3 no-margin no-overflow buy-sell-label">
-                                        <Translate content="transfer.amount" />:
+                                        <Translate content="exchange.quantity" />:
                                     </div>
                                     <div className="grid-block small-5 no-margin no-overflow buy-sell-input">
                                         <input type="number" id="buyAmount" value={amount} onChange={amountChange} autoComplete="off" placeholder="0.0"/>

@@ -16,7 +16,8 @@
   },
   "header": {
     "home_link": "TRADE",
-    "forum_link": "FORUM",
+    "warrant_link": "BCDN凭证交易",
+    "asset_link": "BCDN凭证交易",
     "qq_group": "QQ",
     "new_link": "HELP",
     "ico_link": "ICO",
@@ -857,6 +858,7 @@
     "lowest_ask": "Lowest ask",
     "highest_bid": "Highest bid",
     "total": "Total",
+     "totalorder": "Total",
     "value": "Value",
     "price": "Price",
     "latest": "Latest",
