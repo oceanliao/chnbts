@@ -319,7 +319,6 @@ class Header extends React.Component {
                         
                         <li><a href="https://trade.1001ico.com/dashboard"><Translate component="span" content="header.home_link" /></a></li>
                         <li><a href="https://trade.1001ico.com/market/BCDN_QCNY" target="_blank"><Translate component="span" content="header.asset_link" /></a></li>
-                        <li><a href="https://trade.1001ico.com/market/BCDN.WARRANT_QCNY" target="_blank"><Translate component="span" content="header.warrant_link" /></a></li>
                         <li><a href="https://trade.1001ico.com/market/QCNY_CNY" target="_blank"><Translate component="span" content="header.ico_link" /></a></li>
                          <li><a href="http://1001ico.com/neo/" target="_blank"><Translate component="span" content="header.new_link" /></a></li>
                          
