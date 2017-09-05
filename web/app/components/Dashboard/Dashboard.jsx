@@ -291,7 +291,7 @@ class Dashboard extends React.Component {
                         </div>
                         <div className="grid-container small-12 medium-7" style={{paddingTop: 44}}>
                             
-                            <Translate content="exchange.ico" component="h4" style={{paddingLeft: 30}}/>
+                            <Translate content="exchange.featured" component="h4" style={{paddingLeft: 30}}/>
                             <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
                                 {markets}
                             </div>
@@ -303,6 +303,15 @@ class Dashboard extends React.Component {
                             <Translate content="exchange.ico" component="h4" style={{paddingLeft: 30}}/>
                             <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
                                 {ico_markets}
+                            </div>
+                            
+                        </div>
+                        
+                        <div className="grid-container small-12 medium-7" style={{paddingTop: 44}}>
+                            
+                            <Translate content="exchange.special" component="h4" style={{paddingLeft: 30}}/>
+                            <div className="grid-block small-up-1 large-up-3 xlarge-up-4 no-overflow fm-outer-container">
+                                {special_markets}
                             </div>
                             
                         </div>
